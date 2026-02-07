@@ -288,6 +288,8 @@ test.describe.serial('Buggy cars - Password', () => {
     await page.screenshot({path:path.join(screenshotDir,'REG_P_0158.png')})
   });
 
+  
+
 
   test.afterAll(async () => {
     if (page) await page.close();
