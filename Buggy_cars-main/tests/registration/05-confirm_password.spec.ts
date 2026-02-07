@@ -79,9 +79,6 @@ test.describe.serial('Buggy cars - Confirm Password', () => {
     await page.screenshot({path:path.join(screenshotDir,'REG_CP_0167.png')})
   });
 
-
-
-
   test.afterAll(async () => {
     if (page) await page.close();
   });
