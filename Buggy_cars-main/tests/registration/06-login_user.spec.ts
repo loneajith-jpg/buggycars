@@ -27,7 +27,7 @@ test.describe.serial('Buggy cars - Login User', () => {
       await page.waitForTimeout(2000)
       await page.locator('#confirmPassword').fill('Password123')
       await page.waitForTimeout(2000)    
-      await page.locator('#register').click()                           
+      await page.locator("//button[text()='Register']").click()                           
       await page.screenshot({path:path.join(screenshotDir,'REG_Login_user_0168.png')})
     });
 
