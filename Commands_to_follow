@@ -1,0 +1,10 @@
+To run this Code just give the Command as -> npm test (or) npm run test:coverage.
+
+Playwright Test
+       ↓
+Generate playwright-report/
+       ↓
+Create playwright-report.zip  -> So it will automatically created the playwright report in Zip format, ( As we have installed the bestzip for Supporting the Cross platforms (Windows, Linux, Mac)).
+
+More importantly -> npm test (Command will execute in headless Mode)
+For head Mode => npm run test:demo 

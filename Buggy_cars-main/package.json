@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test",
-    "test:coverage": "nyc --reporter=lcov --reporter=text npx playwright test --workers=4 --reporter=allure-playwright"
+    "test": "npx playwright test && npm run zip-report",
+    "test:coverage": "nyc --reporter=lcov --reporter=text npx playwright test --workers=4 --reporter=allure-playwright",
+    "test:demo": "cross-env PW_DEMO=1 playwright test && npm run zip-report",
+    "zip-report": "bestzip playwright-report.zip playwright-report",
+    "show-report": "npx playwright show-report"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +18,8 @@
     "@playwright/test": "^1.57.0",
     "@types/node": "^24.10.11",
     "allure-playwright": "^2.0.0",
+    "bestzip": "^3.0.1",
+    "cross-env": "^10.1.0",
     "istanbul": "^0.4.5",
     "nyc": "^17.1.0",
     "ts-node": "^10.9.2",
